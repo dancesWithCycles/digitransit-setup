@@ -14,7 +14,7 @@ To build and run your own digitransit instance, you need:
    kubectl, but we highly discourage it.)
 -  One OpenStreetMap extract for your region (see:
    https://download.geofabrik.de)
--  One (or more) :term:`GTFS` Feeds for public transit routes
+-  One (or more) :term:`GTFS` feeds for public transit routes
 -  A GitHub Account (for forking stuff)
 -  A Docker Hub Account (for publishing your containers)
 -  One Domain and access to DNS for creating a subdomain
