@@ -43,4 +43,4 @@ https://digitransit.fi/en/services/
    }
 
 .. note:: 
-     As can be seen in the diagram, some dependencies are circular. This poses a few challenges when first setting up a working instance, which we will address later on.
+     It can be seen in the diagram, some dependencies are circular. This poses a few challenges when first setting up a working instance, which we will address later on.
