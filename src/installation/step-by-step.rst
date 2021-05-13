@@ -281,7 +281,7 @@ Push the resulting image also into docker hub:``docker push verschwoerhaus/hsl-m
 3. Using photon-pelias-adapter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-digitransit originally uses :term:`pelias` as a geocoder: Insert address,
+Digitransit originally uses :term:`pelias` as a geocoder: Insert address,
 get geocoordinates as a result. 
 Sadly, pelias is not maintained
 anymore - and custom adjustments seem to be very hard. We've therefore
