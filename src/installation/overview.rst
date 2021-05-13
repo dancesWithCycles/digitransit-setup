@@ -3,12 +3,12 @@
 Overview
 ========
 
-digitransit is a slightly complex system composed of multiple services
-in container that talk to each other. A nice architecture image can be
+Digitransit is a slightly complex system composed of multiple services
+in containers that talk to each other. A nice architecture image can be
 found at the `digitransit.fi
 documentation <https://digitransit.fi/en/developers/architecture/>`__.
 
-The main components of an digitransit deployment consists of:
+The main components of a digitransit deployment consists of:
 
 -  Multimodal routing engine (:term:`OpenTripPlanner`)
 -  Address search (originally :term:`pelias`)
