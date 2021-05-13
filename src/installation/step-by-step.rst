@@ -25,7 +25,7 @@ You need on your build host:
 1. Building an OpenTripPlanner Graph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At the end of this part, you will end up with a working :term:`OTP data container`. The process works by providing :term:`OpenTripPlanner` with the necessary base data and using it to build the graph that will later be used by OTP to perform routing queries against.
+At the end of this part, you will end up with a working :term:`OTP data container`. The process works by providing :term:`OpenTripPlanner` with the necessary base data and using it to build the graph that will later be used by OTP to perform routing queries.
 
 .. important::
     Make sure that the graph is being built with the same version
