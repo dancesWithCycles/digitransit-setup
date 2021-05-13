@@ -310,7 +310,7 @@ First run ``yarn install``
 To create the theme files, run ``yarn run add-theme <name>`` (you could
 optionally supply a color and logo, read
 `documentation <https://github.com/HSLdevcom/digitransit-ui/blob/master/docs/Themes.md>`__
-for more details)
+for more details).
 
 In ``app/configurations/``, a config file is created with your theme name, e.g. ``config.ulm.js``.
 
