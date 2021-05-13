@@ -210,7 +210,7 @@ You can modify more graph bulding settings in the ``build-config.json``. The Ope
 `Graph Build Configuration <https://docs.opentripplanner.org/en/latest/Configuration/#graph-build-configuration>`__, listing a lot of settings and their default values.
 For the ``router-config.json`` there also exists `documentation with description <https://docs.opentripplanner.org/en/latest/Configuration/#runtime-router-configuration>`__ of the options and their default values.
 
-If you have an GBFS feed, you can add an otp updater config to ``router-config.json`` like this:
+If you have an GBFS feed, you can add an OTP updater config to ``router-config.json`` like this:
 
 ::
 
