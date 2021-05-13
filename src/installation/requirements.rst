@@ -24,4 +24,4 @@ To build and run your own digitransit instance, you need:
 optional
 ~~~~~~~~
 
--  One (or more) :term:`GBFS` Feeds (for bikesharing and/or carsharing)
+-  One (or more) :term:`GBFS` feeds (for bikesharing and/or carsharing)
