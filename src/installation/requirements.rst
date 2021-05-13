@@ -15,9 +15,9 @@ To build and run your own digitransit instance, you need:
 -  One OpenStreetMap extract for your region (see:
    https://download.geofabrik.de)
 -  One (or more) :term:`GTFS` feeds for public transit routes
--  A GitHub Account (for forking stuff)
--  A Docker Hub Account (for publishing your containers)
--  One Domain and access to DNS for creating a subdomain
+-  A GitHub account (for forking stuff)
+-  A Docker Hub account (for publishing your containers)
+-  One domain and access to DNS for creating a subdomain
 -  An externally running `photon <https://github.com/komoot/photon>`_.
    For development and tests, you could try the `public photon instance <https://photon.komoot.de>`_.
 
