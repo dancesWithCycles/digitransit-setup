@@ -208,7 +208,7 @@ For the packaging, define your own ``ROUTER_NAME`` in the line ``ENV ROUTER_NAME
 
 You can modify more graph bulding settings in the ``build-config.json``. The OpenTripPlanner documentation contains a section about
 `Graph Build Configuration <https://docs.opentripplanner.org/en/latest/Configuration/#graph-build-configuration>`__, listing a lot of settings and their default values.
-For the ``router-config.json`` there also exists `Documentation with description <https://docs.opentripplanner.org/en/latest/Configuration/#runtime-router-configuration>`__ of the options and their default values.
+For the ``router-config.json`` there also exists `documentation with description <https://docs.opentripplanner.org/en/latest/Configuration/#runtime-router-configuration>`__ of the options and their default values.
 
 If you have an GBFS feed, you can add an otp updater config to ``router-config.json`` like this:
 
