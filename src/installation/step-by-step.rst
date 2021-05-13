@@ -228,8 +228,8 @@ If you have an GBFS feed, you can add an OTP updater config to ``router-config.j
     ...
 
 The building of the graph happens with the `mfdz OpenTripPlanner fork <https://github.com/mfdz/opentripplanner>`__.
-It is important that the OpenTripPlanner version that builds the graph is the same that later serves the graph. If you want to update, get the latest docker image tag from the
-`docker hub page of mfdz/opentripplanner <https://hub.docker.com/r/mfdz/opentripplanner/tags>`__ and modify ``OTP_VERSION`` in the Dockerfile.
+It is important that the OpenTripPlanner version that builds the graph is the same that later serves the graph. If you want to update, get the latest docker image tag from the Docker Hub page of
+'mfdz/opentripplanner <https://hub.docker.com/r/mfdz/opentripplanner/tags>`__ and modify ``OTP_VERSION`` in the Dockerfile.
 
 For building and publishing, standard docker commands are used:
 
