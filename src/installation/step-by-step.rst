@@ -274,7 +274,7 @@ Edit ``config.js``, modify ``module.exports`` to keep only the
       },
     }
 
-To build, run ``docker build -t verschwoerhaus/hsl-map-server:2020-01-21 .``
+To build, run (possibly with privileged user rights) ``docker build -t verschwoerhaus/hsl-map-server:2020-01-21 .``
 
 Push the resulting image also into docker hub:``docker push verschwoerhaus/hsl-map-server:2020-01-21``
 
