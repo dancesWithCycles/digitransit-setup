@@ -293,9 +293,9 @@ imports, but this should be solveable in the long run)
 The adapter is completely configurable with one ENV variable
 ``PHOTON_URL``. It doesn't need to be custom built.
 
-Later, we're simply using the docker container
-`stadtulm/photon-pelias-adapter from docker
-hub <https://hub.docker.com/r/stadtulm/photon-pelias-adapter>`_.
+Later, we're simply using the Docker container
+`stadtulm/photon-pelias-adapter
+<https://hub.docker.com/r/stadtulm/photon-pelias-adapter>`_ from Docker Hub.
 
 4. Building digitransit-ui
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
