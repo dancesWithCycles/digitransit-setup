@@ -320,7 +320,7 @@ https://raw.githubusercontent.com/verschwoerhaus/digitransit-ui/ulm/app/configur
 For the configuration options, feel free to have a look into all the other files, preferential
 ``config.hsl.js``, ``waltti.js``, ``config.matka.js`` and ``config.default.js``.
 
-The most basic configuration options you may want to change follow:
+The following options are the most basic configuration you may want to change.
 
 ::
     
