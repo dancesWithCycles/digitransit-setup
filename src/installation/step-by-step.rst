@@ -383,7 +383,7 @@ recognized and used:
 For more config options that we set, have a look into
 https://github.com/verschwoerhaus/digitransit-ui/blob/ulm/app/configurations/config.vsh.js
 
-Finally, also create an docker image out of the ui: ``docker build -t verschwoerhaus/digitransit-ui:2020-01-21 .``
+Finally, also create a docker image out of the ui: ``docker build -t verschwoerhaus/digitransit-ui:2020-01-21 .``
 Push the resulting image to docker hub: ``docker push verschwoerhaus/digitransit-ui:2020-01-21``
 
 5. Building digitransit-proxy
