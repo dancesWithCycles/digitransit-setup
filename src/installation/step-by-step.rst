@@ -354,7 +354,7 @@ Enter your used :term:`GTFS` feed ids in
 
     feedIds: ['DING'],
 
-Configure the tile server of your choice. For testing, you might be content
+Configure the tile server of your choice. For testing, you might be satisfied
 using the german osm tile server:
 
 ::
