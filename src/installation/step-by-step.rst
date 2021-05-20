@@ -319,6 +319,12 @@ you end up with a configuration file called ``config.ulm.js``.
 Replace this file with the contents of 
 https://raw.githubusercontent.com/verschwoerhaus/digitransit-ui/ulm/app/configurations/config.vsh.js
 
+If you do this replacement, note that it contains the configuration
+``sprites: 'assets/svg-sprite.hb.svg'``.
+To avoid running into a build failure when creating the Docker container later,
+you can use the default file ```static/assets/svg-sprite.default.svg```
+as source to create your own .svg file.
+
 For the configuration options, feel free to have a look into all the other files, preferential
 ``config.hsl.js``, ``waltti.js``, ``config.matka.js`` and ``config.default.js``.
 
