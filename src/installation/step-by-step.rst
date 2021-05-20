@@ -312,7 +312,9 @@ optionally supply a color and logo, read
 `documentation <https://github.com/HSLdevcom/digitransit-ui/blob/master/docs/Themes.md>`__
 for more details).
 
-In ``app/configurations/``, a config file is created with your theme name, e.g. ``config.ulm.js``.
+In ``app/configurations/``, a config file is created with your theme name.
+For instance, if you choose ``ulm`` as ``<name>`` in the ``yarn`` call above,
+you end up with a configuration file called ``config.ulm.js``.
 
 Replace this file with the contents of 
 https://raw.githubusercontent.com/verschwoerhaus/digitransit-ui/ulm/app/configurations/config.vsh.js
