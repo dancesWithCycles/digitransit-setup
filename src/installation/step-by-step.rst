@@ -397,8 +397,8 @@ Push the resulting image to docker hub:
 ``docker push verschwoerhaus/digitransit-ui:2020-01-21``.
 Note, the ``build`` and ``push`` instruction uses the pattern
 ``<Docker ID>/<container name>:<container tag>``.
-You might want to call the instruction ``docker login``
-to be able to push the container to your Docker account.
+You might want use your own account and call the instruction ``docker login``
+to be able to push the container to your own Docker account.
 
 5. Building digitransit-proxy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
