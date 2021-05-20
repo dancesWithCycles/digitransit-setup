@@ -328,7 +328,7 @@ as source to create your own .svg file.
 For the configuration options, feel free to have a look into all the other files, preferential
 ``config.hsl.js``, ``config.waltti.js``, ``config.matka.js`` and ``config.default.js``.
 
-The following options are the most basic configuration you may want to change.
+The following options is the most basic configuration you may want to change.
 
 ::
     
