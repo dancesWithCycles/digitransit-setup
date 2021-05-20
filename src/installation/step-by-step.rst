@@ -303,7 +303,7 @@ Later, we're simply using the Docker container
 Check out `HSLdevcom/digitransit-ui <https://github.com/HSLdevcom/digitransit-ui>`__: ``git clone https://github.com/HSLdevcom/digitransit-ui``
 
 To build your own digitransit user interface, you need to add a theme
-and provide configuration (which includes your custom urls).
+and provide configuration (which includes your custom URLs).
 
 First run ``yarn install``
 
