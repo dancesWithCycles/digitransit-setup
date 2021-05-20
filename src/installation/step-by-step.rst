@@ -405,8 +405,8 @@ to be able to push the container to your own Docker account.
 
 .. warning:: 
     digitransit-proxy is deprecated as of 2020-08 and is only
-    preserved for archival reasons. We're using the k8s ingress
-    now, thats introduced in the next step
+    preserved for archival reasons. We're using Kubernetes Ingress
+    now, thats introduced in the next step.
 
 .. container:: toggle
 
