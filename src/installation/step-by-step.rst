@@ -347,7 +347,7 @@ and fill the following constants:
     const minLon = 20;
     const maxLon = 31;
 
-You have to provide your own urls and paths with your config name, eg.
+You have to provide your own URLs and paths with your config name, eg.
 in
 
 ::
@@ -417,7 +417,7 @@ Push the resulting image to docker hub: ``docker push verschwoerhaus/digitransit
     https://github.com/HSLdevcom/digitransit-proxy/compare/master...transportkollektiv:master
     for all the location config you should remove.
 
-    Note that some endpoints need your configuration name in the url, eg
+    Note that some endpoints need your configuration name in the URL, eg
     ``/routing/v1/routers/hsl`` → ``/routing/v1/routers/ulm``.
 
 6. Crafting kubernetes yaml
@@ -430,7 +430,7 @@ You need:
    with `kubeconfig <https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/>`__
    for this cluster
 -  already configured ingress in your kubernetes setup, for example with the `nginx ingress controller <https://kubernetes.github.io/ingress-nginx/>`__
--  url of your pelias service
+-  URL of your pelias service
 
 We're going to connect the different parts to each other: 
 
@@ -448,9 +448,9 @@ Make some parts accessible from the outside:
 
 And then, digitransit-ui running in your browser can access these:
 
-- hsl-map-server → digitransit-ui (public, by ingress url)
-- opentripplanner → digitransit-ui (public, by ingress url)
-- photon-pelias-adapter → digitransit-ui (public, by ingress url)
+- hsl-map-server → digitransit-ui (public, by ingress URL)
+- opentripplanner → digitransit-ui (public, by ingress URL)
+- photon-pelias-adapter → digitransit-ui (public, by ingress URL)
 
 For all of this, we are building deployments and services for each of the containers.
 Note that you have to use the right container image tags.
@@ -465,10 +465,10 @@ https://github.com/verschwoerhaus/digitransit-kubernetes/blob/master/all.yml
 Edit the deployment container specs, modify the ``image`` and ``env`` keys.
 For the environment variables, have a look at these of digitransit-ui (``CONFIG``), 
 opentripplanner (``ROUTER_NAME``), and photon-pelias-adapter (``PHOTON_URL``).
-The digitransit-ui container also needs the public urls to OTP (``OTP_URL``) and 
+The digitransit-ui container also needs the public URLs to OTP (``OTP_URL``) and 
 photon-pelias-adapter (``GEOCODING_BASE_URL``).
 
-For these urls and to write the services up to the ingress, have a look at 
+For these URLs and to write the services up to the ingress, have a look at 
 https://github.com/verschwoerhaus/digitransit-kubernetes/blob/master/ingress.yaml
 
 For the parts you have to edit, look at the hostnames (``host:``) and at the paths (``path:``).
