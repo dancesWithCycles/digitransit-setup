@@ -313,7 +313,7 @@ optionally supply a color and logo, read
 for more details).
 
 In ``app/configurations/``, a config file is created with your theme name.
-For instance, if you choose ``ulm`` as ``<name>`` in the ``yarn`` call above,
+For instance, if you choose ``ulm`` as ``<name>`` in the ``yarn`` instruction above,
 you end up with a configuration file called ``config.ulm.js``.
 
 Replace this file with the contents of 
@@ -391,8 +391,14 @@ recognized and used:
 For more config options that we set, have a look into
 https://github.com/verschwoerhaus/digitransit-ui/blob/ulm/app/configurations/config.vsh.js
 
-Finally, also create a docker image out of the ui: ``docker build -t verschwoerhaus/digitransit-ui:2020-01-21 .``
-Push the resulting image to docker hub: ``docker push verschwoerhaus/digitransit-ui:2020-01-21``
+Finally, also create a docker image out of the ui:
+``docker build -t verschwoerhaus/digitransit-ui:2020-01-21 .``.
+Push the resulting image to docker hub:
+``docker push verschwoerhaus/digitransit-ui:2020-01-21``.
+Note, the ``build`` and ``push`` instruction uses the pattern
+``<Docker ID>/<container name>:<container tag>``.
+You might want to call the instruction ``docker login``
+to be able to push the container to your Docker account.
 
 5. Building digitransit-proxy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
