@@ -14,10 +14,11 @@ Step-by-step guide
 
 You need on your build host:
 
-- docker-ce runtime
+- docker-ce runtime (`installation <https://docs.docker.com/engine/install/ubuntu/>`__, `short installation script <https://get.docker.com>`__)
 - git
-- nodejs, LTS version
-- yarn
+- nodejs, LTS version (`nodesource repository <https://github.com/nodesource/distributions#deb>`__)
+- yarn (`installation <https://yarnpkg.com/getting-started/install>`__)
+- build-essential (for the node dependencies)
 
 .. note:: This should be enhanced with copy-pasteable commands
 
@@ -36,10 +37,8 @@ You need:
 - One (or more) :term:`GTFS` Feed with a publicly accessible URL
   (if you only have a :term:`GTFS` zip file, upload it somewhere
   public)
-- One OpenStreetMap extract for your region in .pbf format,
+- One (or more) OpenStreetMap extract(s) for your region in .pbf format,
   accessible at a public URL - try https://download.geofabrik.de 
-- if you need to merge two regions, try
-  `osmium merge <https://gis.stackexchange.com/questions/242704/merging-osm-pbf-files>`__
 
 For the configuration, find and memorize a short identifier. You
 need this often. In our example, we use ``ulm``.
@@ -122,6 +121,9 @@ Method 1: vsh-style modifying of opentripplanner-data-container
         const setCurrentConfig = (name) => {
           ALL_CONFIGS = [WALTTI_CONFIG, HSL_CONFIG, FINLAND_CONFIG, ULM_CONFIG].reduce((acc, nxt) => {
 
+
+    If you use multiple OSM extracts, merge them with tools like `osmium merge <https://gis.stackexchange.com/questions/242704/merging-osm-pbf-files>`__ first.
+
     Add your OSM extract to the osm config near the end of the file:
 
     ::
@@ -201,7 +203,7 @@ process by introducing a custom dockerfile for the datacontainer.
 For this, we're going to fork the `digitransit-otp-data repository <https://github.com/verschwoerhaus/digitransit-otp-data>`__.
 
 The ``Dockerfile`` is the main file you have to edit.
-Below ``# add build data`` you see a list of ``ADD`` statements. Replace these URLs with those of your GTFS and OSM dump (in the pbf format).
+Below ``# add build data`` you see a list of ``ADD`` statements. Replace these URLs with those of your GTFS and OSM dump(s) (in the pbf format).
 For the packaging, define your own ``ROUTER_NAME`` in the line ``ENV ROUTER_NAME=...``.
 
 You can modify more graph bulding settings in the ``build-config.json``. The OpenTripPlanner Documentation contains a section about
@@ -253,7 +255,7 @@ For building and publishing, standard docker commands are used:
 Check out `HSLdevcom/hsl-map-server <https://github.com/HSLdevcom/hsl-map-server>`__: ``git clone https://github.com/HSLdevcom/hsl-map-server``
 
 Edit ``config.js``, modify ``module.exports`` to keep only the
-``stop-map`` (and the citybike, if needed) map layer:
+``stop-map`` (rename ``hsl-stop-map`` into ``stop-map`` for this) and the ``citybike-map`` (only if needed) map layer:
 
 ::
 
@@ -298,6 +300,8 @@ hub <https://hub.docker.com/r/stadtulm/photon-pelias-adapter>`_.
 4. Building digitransit-ui
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Check out `HSLdevcom/digitransit-ui <https://github.com/HSLdevcom/digitransit-ui>`__: ``git clone https://github.com/HSLdevcom/digitransit-ui``
+
 To build your own digitransit user interface, you need to add a theme
 and provide configuration (which includes your custom urls).
 
@@ -308,10 +312,32 @@ optionally supply a color and logo, read
 `documentation <https://github.com/HSLdevcom/digitransit-ui/blob/master/docs/Themes.md>`__
 for more details)
 
-In ``app/configurations/``, create your own ``config.ulm.js``. For the
-configuration content, look into all the other files, preferential
-``config.hsl.js``, ``waltti.js``, ``config.matka.js`` and
-``config.default.js``.
+In ``app/configurations/``, a config file is created with your theme name, e.g. ``config.ulm.js``.
+
+Replace this file with the contents of 
+https://raw.githubusercontent.com/verschwoerhaus/digitransit-ui/ulm/app/configurations/config.vsh.js
+
+For the configuration options, feel free to have a look into all the other files, preferential
+``config.hsl.js``, ``waltti.js``, ``config.matka.js`` and ``config.default.js``.
+
+The most basic configuration options you may want to change follow:
+
+::
+    
+    const APP_TITLE = 'digitransit ';
+    const APP_DESCRIPTION = 'digitransit - ber';
+
+
+Define the bounding box of the area in which search queries are preferred.
+Use a tool like https://boundingbox.klokantech.com to draw a bounding box
+and fill the following constants:
+
+::
+
+    const minLat = 60;
+    const maxLat = 70;
+    const minLon = 20;
+    const maxLon = 31;
 
 You have to provide your own urls and paths with your config name, eg.
 in
@@ -435,7 +461,9 @@ The digitransit-ui container also needs the public urls to OTP (``OTP_URL``) and
 photon-pelias-adapter (``GEOCODING_BASE_URL``).
 
 For these urls and to write the services up to the ingress, have a look at 
-https://github.com/verschwoerhaus/digitransit-kubernetes/blob/master/ingress.yml
+https://github.com/verschwoerhaus/digitransit-kubernetes/blob/master/ingress.yaml
+
+For the parts you have to edit, look at the hostnames (``host:``) and at the paths (``path:``).
 
 For handling HTTPS, add tls-keys like in this config:
 https://github.com/stadtulm/digitransit-k8s/blob/master/ingress.yaml
@@ -448,12 +476,14 @@ https://github.com/stadtulm/digitransit-k8s/blob/master/ingress.yaml
 7. Deploying
 ~~~~~~~~~~~~
 
-Execute ``kubectl apply -f digitransit.yml``
+Execute ``kubectl apply -f digitransit.yml`` and ``kubectl apply -f ingress.yml``
 
 8. ???
 ~~~~~~
 
-Watch ``kubectl get pods``
+Watch ``kubectl get pods``.
+
+Look at ``kubectl get ingress``
 
 9. Profit!
 ~~~~~~~~~~
