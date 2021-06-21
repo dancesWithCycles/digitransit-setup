@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Glossary &mdash; digitransit transportkollektiv cookbook</title>
@@ -13,6 +14,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
 
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/togglebutton.js"></script>
-        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -219,43 +222,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="glossary">
+  <section id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
 <dl class="glossary">
-<dt id="term-digitransit-ui">digitransit-ui</dt><dd><p>This is the user-facing part of digitransit that provides the user experience. You will probably want to build your localized version yourself. The official version is maintained by HSL and lives at <a class="reference external" href="https://github.com/HSLdevcom/digitransit-ui">HSLdevcom/digitransit-ui</a></p>
+<dt id="term-digitransit-ui">digitransit-ui<a class="headerlink" href="#term-digitransit-ui" title="Permalink to this term">¶</a></dt><dd><p>This is the user-facing part of digitransit that provides the user experience. You will probably want to build your localized version yourself. The official version is maintained by HSL and lives at <a class="reference external" href="https://github.com/HSLdevcom/digitransit-ui">HSLdevcom/digitransit-ui</a></p>
 </dd>
-<dt id="term-GTFS">GTFS</dt><dd><p>General Transport Feed Specification, a common exchange format for public (static) transit schedules and related information such as stop locations etcetera. <a class="reference external" href="https://en.wikipedia.org/wiki/General_Transit_Feed_Specification">Wikipedia (en)</a>; <a class="reference external" href="https://developers.google.com/transit/gtfs/">Specification</a></p>
+<dt id="term-GTFS">GTFS<a class="headerlink" href="#term-GTFS" title="Permalink to this term">¶</a></dt><dd><p>General Transport Feed Specification, a common exchange format for public (static) transit schedules and related information such as stop locations etcetera. <a class="reference external" href="https://en.wikipedia.org/wiki/General_Transit_Feed_Specification">Wikipedia (en)</a>; <a class="reference external" href="https://developers.google.com/transit/gtfs/">Specification</a></p>
 <p>See also: <a class="reference internal" href="datasources.html#datasources-gtfs"><span class="std std-ref">Datasources GTFS</span></a></p>
 </dd>
-<dt id="term-GBFS">GBFS</dt><dd><p>General Bikeshare Feed Specification, a common exchange format for bikesharing (or vehicle sharing in general), including the location of sharing docks/hubs and individual free floating vehicles. Conceptually very different from GTFS. <a class="reference external" href="https://github.com/NABSA/gbfs">Github specification repo</a></p>
+<dt id="term-GBFS">GBFS<a class="headerlink" href="#term-GBFS" title="Permalink to this term">¶</a></dt><dd><p>General Bikeshare Feed Specification, a common exchange format for bikesharing (or vehicle sharing in general), including the location of sharing docks/hubs and individual free floating vehicles. Conceptually very different from GTFS. <a class="reference external" href="https://github.com/NABSA/gbfs">Github specification repo</a></p>
 <p>See also: <a class="reference internal" href="datasources.html#datasources-gbfs"><span class="std std-ref">Datasources GBFS</span></a></p>
 </dd>
-<dt id="term-hsl-map-server">hsl-map-server</dt><dd><p>An additional map tile server (<a class="reference external" href="https://github.com/HSLdevcom/hsl-map-server">original repository here</a>) that ingests features such as stops, bikesharing stations etc. and displays them as items on an otherwise transparent map layer, above the basemap. This allows for clickable stops etc.</p>
+<dt id="term-hsl-map-server">hsl-map-server<a class="headerlink" href="#term-hsl-map-server" title="Permalink to this term">¶</a></dt><dd><p>An additional map tile server (<a class="reference external" href="https://github.com/HSLdevcom/hsl-map-server">original repository here</a>) that ingests features such as stops, bikesharing stations etc. and displays them as items on an otherwise transparent map layer, above the basemap. This allows for clickable stops etc.</p>
 </dd>
-<dt id="term-OpenStreetMap">OpenStreetMap</dt><dd><p>A crowd sourced geo-database. Data from OpenStreetMap is used for foot, bike and car routing in <a class="reference internal" href="#term-OpenTripPlanner"><span class="xref std std-term">OpenTripPlanner</span></a>. Country and regional data extracts are provided by the <a class="reference external" href="http://download.geofabrik.de/">Geofabrik download servers</a>. For custom regions or smaller extracts the <a class="reference external" href="https://extract.bbbike.org/">BBBike extract service</a> can be used. (use PBF as extract format.)
+<dt id="term-OpenStreetMap">OpenStreetMap<a class="headerlink" href="#term-OpenStreetMap" title="Permalink to this term">¶</a></dt><dd><p>A crowd sourced geo-database. Data from OpenStreetMap is used for foot, bike and car routing in <a class="reference internal" href="#term-OpenTripPlanner"><span class="xref std std-term">OpenTripPlanner</span></a>. Country and regional data extracts are provided by the <a class="reference external" href="http://download.geofabrik.de/">Geofabrik download servers</a>. For custom regions or smaller extracts the <a class="reference external" href="https://extract.bbbike.org/">BBBike extract service</a> can be used. (use PBF as extract format.)
 OpenStreetMap data also can be used for search. (<a class="reference internal" href="#term-pelias"><span class="xref std std-term">pelias</span></a>, <a class="reference internal" href="#term-photon"><span class="xref std std-term">photon</span></a>)
 <a class="reference external" href="https://openstreetmap.org/">Website</a></p>
 <p>See also: <a class="reference internal" href="datasources.html#datasources-openstreetmap"><span class="std std-ref">Datasources OpenStreetMap</span></a></p>
 </dd>
-<dt id="term-OpenTripPlanner">OpenTripPlanner</dt><dd><p>The Free-/Open-Source multimodal trip planner used for digitransit. <a class="reference external" href="http://www.opentripplanner.org/">Website</a></p>
+<dt id="term-OpenTripPlanner">OpenTripPlanner<a class="headerlink" href="#term-OpenTripPlanner" title="Permalink to this term">¶</a></dt><dd><p>The Free-/Open-Source multimodal trip planner used for digitransit. <a class="reference external" href="http://www.opentripplanner.org/">Website</a></p>
 </dd>
-<dt id="term-OTP-data-container">OTP data container</dt><dd><p>The Docker container in which the <a class="reference internal" href="#term-OpenTripPlanner"><span class="xref std std-term">OpenTripPlanner</span></a> routing graph lives. This container can be swapped out for an updated version whenever the need arises.</p>
+<dt id="term-OTP-data-container">OTP data container<a class="headerlink" href="#term-OTP-data-container" title="Permalink to this term">¶</a></dt><dd><p>The Docker container in which the <a class="reference internal" href="#term-OpenTripPlanner"><span class="xref std std-term">OpenTripPlanner</span></a> routing graph lives. This container can be swapped out for an updated version whenever the need arises.</p>
 </dd>
-<dt id="term-ParkenDD-ParkAPI">ParkenDD / ParkAPI</dt><dd><p>OpenSource project to collect and scape parking lot occupancy data and bring them into an <a class="reference external" href="https://github.com/offenesdresden/ParkAPI/">unified json format</a>. Data can be integrated using <a class="reference internal" href="stadtnavi-extensions.html#stadtnavi-extensions-dynamic-parking-lots"><span class="std std-ref">stadtnavi extension dynamic parking lots</span></a>.
+<dt id="term-ParkenDD-ParkAPI">ParkenDD / ParkAPI<a class="headerlink" href="#term-ParkenDD-ParkAPI" title="Permalink to this term">¶</a></dt><dd><p>OpenSource project to collect and scape parking lot occupancy data and bring them into an <a class="reference external" href="https://github.com/offenesdresden/ParkAPI/">unified json format</a>. Data can be integrated using <a class="reference internal" href="stadtnavi-extensions.html#stadtnavi-extensions-dynamic-parking-lots"><span class="std std-ref">stadtnavi extension dynamic parking lots</span></a>.
 <a class="reference external" href="https://parkendd.de">Website</a>, <a class="reference external" href="https://github.com/offenesdresden/ParkAPI/">Github</a>, <a class="reference external" href="https://parkendd.de/map.html">Map</a></p>
 <p>See also: <a class="reference internal" href="datasources.html#datasources-parkapi"><span class="std std-ref">Datasources ParkenDD ParkAPI</span></a></p>
 </dd>
-<dt id="term-pelias">pelias</dt><dd><p>King of Iolcus in Greek mythology. Also, a <a class="reference external" href="https://en.wikipedia.org/wiki/Geocoding">geocoder</a>:
+<dt id="term-pelias">pelias<a class="headerlink" href="#term-pelias" title="Permalink to this term">¶</a></dt><dd><p>King of Iolcus in Greek mythology. Also, a <a class="reference external" href="https://en.wikipedia.org/wiki/Geocoding">geocoder</a>:
 insert address, get geocoordinates as a result. Or vice versa. Supports suggest as you type.
 Not maintained anymore, therefore replaced with <a class="reference external" href="https://github.com/komoot/photon">photon</a> using <a class="reference external" href="https://github.com/stadtulm/photon-pelias-adapter">photon-pelias-adapter</a> in
 our deployments. <a class="reference external" href="https://www.pelias.io/">Website</a></p>
 </dd>
-<dt id="term-photon">photon</dt><dd><p>OpenStreetMap data based <a class="reference external" href="https://en.wikipedia.org/wiki/Geocoding">geocoder</a>. Supports suggest as you type. Based on the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim Geocoder</a>.
+<dt id="term-photon">photon<a class="headerlink" href="#term-photon" title="Permalink to this term">¶</a></dt><dd><p>OpenStreetMap data based <a class="reference external" href="https://en.wikipedia.org/wiki/Geocoding">geocoder</a>. Supports suggest as you type. Based on the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Nominatim">Nominatim Geocoder</a>.
 We use photon in digitransit with <a class="reference external" href="https://github.com/stadtulm/photon-pelias-adapter">photon-pelias-adapter</a>.
 <a class="reference external" href="http://photon.komoot.de/">Website with Demo</a>, <a class="reference external" href="https://github.com/komoot/photon">Github</a></p>
 </dd>
 </dl>
-</div>
+</section>
 
 
            </div>

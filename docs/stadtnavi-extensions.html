@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Stadtnavi extensions &mdash; digitransit transportkollektiv cookbook</title>
@@ -13,6 +14,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
 
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/togglebutton.js"></script>
-        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -220,10 +223,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="stadtnavi-extensions">
+  <section id="stadtnavi-extensions">
 <h1>Stadtnavi extensions<a class="headerlink" href="#stadtnavi-extensions" title="Permalink to this headline">¶</a></h1>
 <p>Stadtnavi has added the following features:</p>
-<div class="section" id="dynamic-parking-lots-routing-and-map-layer">
+<section id="dynamic-parking-lots-routing-and-map-layer">
 <span id="stadtnavi-extensions-dynamic-parking-lots"></span><h2>Dynamic parking lots routing and map layer<a class="headerlink" href="#dynamic-parking-lots-routing-and-map-layer" title="Permalink to this headline">¶</a></h2>
 <p><img alt="Screenshot1" src="_images/dynamic-parking-lots.png" /></p>
 <p>This map layer adds information about car parking lots with realtime
@@ -233,15 +236,15 @@ more information.</p>
 <a class="reference external" href="https://github.com/offenesdresden/ParkAPI">ParkAPI</a> feed.
 Herrenberg’s feed is available at: <a class="reference external" href="https://api.stadtnavi.de/parkapi.json">https://api.stadtnavi.de/parkapi.json</a></p>
 <p>See also: <a class="reference internal" href="datasources.html#datasources-parkapi"><span class="std std-ref">Datasources ParkenDD ParkAPI</span></a></p>
-<div class="section" id="opentripplanner">
+<section id="opentripplanner">
 <h3>OpenTripPlanner<a class="headerlink" href="#opentripplanner" title="Permalink to this headline">¶</a></h3>
 <p>To add realtime parking lot information you need to <a class="reference external" href="https://github.com/mfdz/OpenTripPlanner-data-container/commit/e2572ea5b526bedf0359b681f7e7391017f69db5">configure a ParkAPI
 updater</a>.</p>
 <p>More information about the possible configuration options can be found
 in the <a class="reference external" href="https://github.com/mfdz/OpenTripPlanner/blob/master/docs/Configuration.md#configuring-real-time-updaters">OTP
 documentation</a>.</p>
-</div>
-<div class="section" id="frontend">
+</section>
+<section id="frontend">
 <h3>Frontend<a class="headerlink" href="#frontend" title="Permalink to this headline">¶</a></h3>
 <p>First, to visualise the parking lots, an instance of
 <a class="reference external" href="https://github.com/stadtnavi/tilelive-park-api">tilelive-park-api</a>
@@ -253,8 +256,8 @@ user may decide to re-run the routing query
 excluding full car-parks.</p>
 <p><img alt="Screenshot2" src="_images/dynamic-parking-lot-full.png" /></p>
 <p>This code lives in <code class="docutils literal notranslate"><span class="pre">CarLeg.js</span></code>.</p>
-</div>
-<div class="section" id="config">
+</section>
+<section id="config">
 <h3>Config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h3>
 <p>in OpenTripPlanner <code class="docutils literal notranslate"><span class="pre">router-config.json</span></code>  you need to add the <a class="reference internal" href="datasources.html#datasources-parkapi"><span class="std std-ref">ParkAPI</span></a> endpoint to updaters</p>
 <blockquote>
@@ -297,8 +300,8 @@ excluding full car-parks.</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="related-pull-requests-commits">
+</section>
+<section id="related-pull-requests-commits">
 <h3>Related pull requests &amp; commits<a class="headerlink" href="#related-pull-requests-commits" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/stadtnavi/digitransit-ui/pull/70">https://github.com/stadtnavi/digitransit-ui/pull/70</a></p></li>
@@ -308,9 +311,9 @@ excluding full car-parks.</p>
 <li><p><a class="reference external" href="https://github.com/mfdz/OpenTripPlanner-data-container/commit/e2572ea5b526bedf0359b681f7e7391017f69db5">https://github.com/mfdz/OpenTripPlanner-data-container/commit/e2572ea5b526bedf0359b681f7e7391017f69db5</a></p></li>
 <li><p>WIP branch to integrate dynamic parking lots in digitransit-ui without any stadtnavi dependencies: <a class="reference external" href="https://github.com/verschwoerhaus/digitransit-ui/tree/ulm-dynamicparkinglots">https://github.com/verschwoerhaus/digitransit-ui/tree/ulm-dynamicparkinglots</a></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="free-floating-bicycle-and-scooter-sharing">
+</section>
+</section>
+<section id="free-floating-bicycle-and-scooter-sharing">
 <span id="stadtnavi-extensions-free-floating"></span><h2>Free-floating bicycle and scooter sharing<a class="headerlink" href="#free-floating-bicycle-and-scooter-sharing" title="Permalink to this headline">¶</a></h2>
 <p><img alt="Screenshot3" src="_images/free-floating-bicycle-sharing.png" /></p>
 <p>This allows digitransit to drop off bicycles and scooters anywhere and
@@ -341,15 +344,15 @@ routing requests.</p></li>
 <li><p>Business zones, restricting the drop off to a certain geographic
 area, are not supported.</p></li>
 </ul>
-<div class="section" id="id1">
+<section id="id1">
 <h3>OpenTripPlanner<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>As with any other bike or car sharing, you need to <a class="reference external" href="https://github.com/mfdz/OpenTripPlanner-data-container/blob/e2572ea/router-hb/router-config.json#L30-L38">configure a graph
 updater</a>.</p>
 <p>More information about the various rentalTypes are available in the
 <a class="reference external" href="https://github.com/mfdz/OpenTripPlanner/blob/master/docs/Configuration.md#gbfs-configuration">Configuration
 reference</a>.</p>
-</div>
-<div class="section" id="map-layer">
+</section>
+<section id="map-layer">
 <h3>Map layer<a class="headerlink" href="#map-layer" title="Permalink to this headline">¶</a></h3>
 <p>The frontend is already part of digitransit and simply needs to be
 activated.</p>
@@ -361,8 +364,8 @@ is a bug (?) in this layer preventing frequent updates
 of positions: on top of the normal tile-based cache logic this layer
 also has its own cache, which never expires.
 (<a class="reference external" href="https://github.com/HSLdevcom/tilelive-otp-citybikes/blob/master/index.js#L47">https://github.com/HSLdevcom/tilelive-otp-citybikes/blob/master/index.js#L47</a>)</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>Frontend<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>If you are using the mode <code class="docutils literal notranslate"><span class="pre">free-floating-with-temporary-dropoff</span></code>,
 the backend emits warnings about having to return the
@@ -372,17 +375,17 @@ The main code resides in <code class="docutils literal notranslate"><span class=
 change the client-side GraphQL schema file (<code class="docutils literal notranslate"><span class="pre">schema.json</span></code>)
 and the queries in <code class="docutils literal notranslate"><span class="pre">ItineraryTab.js</span></code> and
 <code class="docutils literal notranslate"><span class="pre">SummaryListContainer.js</span></code>.</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h3>Related pull requests &amp; commits<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/mfdz/OpenTripPlanner-data-container/blob/e2572ea/router-hb/router-config.json#L30-L38">https://github.com/mfdz/OpenTripPlanner-data-container/blob/e2572ea/router-hb/router-config.json#L30-L38</a></p></li>
 <li><p><a class="reference external" href="https://github.com/stadtnavi/hsl-map-server/commit/d3a70b975c1c875d293e7400436b3fa283621854">https://github.com/stadtnavi/hsl-map-server/commit/d3a70b975c1c875d293e7400436b3fa283621854</a></p></li>
 <li><p><a class="reference external" href="https://github.com/stadtnavi/digitransit-ui/pull/277">https://github.com/stadtnavi/digitransit-ui/pull/277</a></p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

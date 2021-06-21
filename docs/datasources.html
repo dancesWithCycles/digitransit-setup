@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Data Sources &mdash; digitransit transportkollektiv cookbook</title>
@@ -13,6 +14,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
 
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/togglebutton.js"></script>
-        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -220,24 +223,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="data-sources">
+  <section id="data-sources">
 <h1>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h1>
 <p>This is a list of Digitransit data sources, formats and their capabilities.</p>
-<div class="section" id="gtfs">
+<section id="gtfs">
 <span id="datasources-gtfs"></span><h2>GTFS<a class="headerlink" href="#gtfs" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/General_Transit_Feed_Specification">GTFS (General Transport Feed Specification)</a> is a common exchange format for public (static) transit schedules and related information such as stop locations etcetera. It is the default format OpenTripPlanner is using for public transport routing.</p>
 <p>For live updates like vehicle positions, delays and temporary service disruptions <a class="reference external" href="https://gtfs.org/reference/realtime/v2/">GTFS-RT</a> (GTFS Realtime) can be used as an addition to GTFS. OpenTripPlanner is able to process GTFS-RT, if trip IDs are matching the GTFS-feeds IDs.</p>
 <p>If public transport agencies provide their data to other external services like Google Maps or Apple Maps, they are definitely able to provide GTFS-data.</p>
 <p>If OTP/digitransit only shows straight lines between trips, the <code class="docutils literal notranslate"><span class="pre">shapes.txt</span></code> file is missing in the GTFS. Not all agencies are able to export them or can’t export them for copyright reasons. The tool <a class="reference external" href="https://github.com/ad-freiburg/pfaedle">pfaedle</a> is able to add these shapes to an existing GTFS file. It also looks like <a class="reference external" href="http://www.arcgis.com/home/item.html?id=ce51601e18ae4367814a8a53a1659b33">ArcGIS is able</a> to generate the <code class="docutils literal notranslate"><span class="pre">shapes.txt</span></code> file from GTFS.</p>
-</div>
-<div class="section" id="gbfs">
+</section>
+<section id="gbfs">
 <span id="datasources-gbfs"></span><h2>GBFS<a class="headerlink" href="#gbfs" title="Permalink to this headline">¶</a></h2>
 <p>GBFS is a data format/API for publishing status information of bikesharing systems, but can also used for kinds of sharing vehicles, like E-scooters and cars. It publishes state and geolocation of available vehicles and stations/docks (but not currently rented vehicles).</p>
 <p>Most bike- and scootersharing operators are able to provide GBFS, also most whitelabel sharing software is able to provide GBFS. If sharing operators provide <a class="reference external" href="https://github.com/openmobilityfoundation/mobility-data-specification">MDS</a> data the authorities, a public GBFS-feed is part of the specification.</p>
 <p>The specification is available <a class="reference external" href="https://github.com/NABSA/gbfs">on Github</a></p>
 <p>OpenTripPlanner supports multimodal routing of station based sharing systems with GBFS by default. For free floating systems <a class="reference internal" href="stadtnavi-extensions.html#stadtnavi-extensions-free-floating"><span class="std std-ref">Stadtnavi extension</span></a> can be used.</p>
-</div>
-<div class="section" id="openstreetmap">
+</section>
+<section id="openstreetmap">
 <span id="datasources-openstreetmap"></span><h2>OpenStreetMap<a class="headerlink" href="#openstreetmap" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://openstreetmap.org/">OpenStreetMap</a> is a crowd sourced geo-database and also the biggest source for open map data. Data from OpenStreetMap is used for foot, bike and car routing in <a class="reference internal" href="glossary.html#term-OpenTripPlanner"><span class="xref std std-term">OpenTripPlanner</span></a>.</p>
 <p>OpenStreetMap data also can be used for search (<a class="reference external" href="https://en.wikipedia.org/wiki/Geocoding">geocoding</a>) using <a class="reference internal" href="glossary.html#term-pelias"><span class="xref std std-term">pelias</span></a> or <a class="reference internal" href="glossary.html#term-photon"><span class="xref std std-term">photon</span></a> with <a class="reference external" href="https://github.com/stadtulm/photon-pelias-adapter">photon-pelias-adapter</a>.</p>
@@ -245,16 +248,16 @@
 Samller Extracts of custom regions can be generated using the <a class="reference external" href="https://extract.bbbike.org/">BBBike extract service</a>.</p>
 <p>For the use in OpenTripPlanner you need to download the data in <code class="docutils literal notranslate"><span class="pre">.pbf</span></code>-Format (Protocolbuffer).</p>
 <p>OpenStreetMap can also be used as background map. For that you need a <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tile_servers">Tile Server</a>. If you don’t want to setup your own Tile Server, there are many commercial providers for OpenStreetMap tile servers. Keep in mind that, most free tile severs are funded by donations and should not be used for extensive third party projects.</p>
-</div>
-<div class="section" id="parkendd-parkapi">
+</section>
+<section id="parkendd-parkapi">
 <span id="datasources-parkapi"></span><h2>ParkenDD ParkAPI<a class="headerlink" href="#parkendd-parkapi" title="Permalink to this headline">¶</a></h2>
 <p>ParkenDD is a OpenSource Project collecting and scarping parking lot availablity data from different cities and provide them in a unified simple JSON format via <a class="reference external" href="https://github.com/offenesdresden/ParkAPI">ParkAPI</a>.
 Data from ParkenDD or in ParkAPI format can be included in digitransit using <a class="reference internal" href="stadtnavi-extensions.html#stadtnavi-extensions-dynamic-parking-lots"><span class="std std-ref">stadtnavi extension dynamic parking lots</span></a>.</p>
 <p>ParkAPI format is also descriped in JSON schema <a class="reference external" href="https://github.com/offenesdresden/ParkAPI/wiki/city.json">https://github.com/offenesdresden/ParkAPI/wiki/city.json</a></p>
 <p>A map representation of the data can be found <a class="reference external" href="https://parkendd.de/en/map.html#Dresden">here</a>. You can find the integrated cities in the dropdown on the top right or in the <a class="reference external" href="https://github.com/offenesdresden/ParkAPI/tree/master/park_api/cities">github repo</a>. To integrate new cities you can look a the <a class="reference external" href="https://github.com/offenesdresden/ParkAPI/blob/master/park_api/cities/Sample_City.py">Sample_City script</a> and the <a class="reference external" href="https://github.com/offenesdresden/ParkAPI#adding-support-for-a-new-city">repos readme</a>.</p>
 <p>A public API for all integrated cities is available at  <code class="docutils literal notranslate"><span class="pre">https://api.parkendd.de/</span></code>.</p>
-</div>
-<div class="section" id="geojson">
+</section>
+<section id="geojson">
 <h2>GeoJSON<a class="headerlink" href="#geojson" title="Permalink to this headline">¶</a></h2>
 <p>GeoJSON is a popular Geodata format. GeoJSON supports the geometry types Point, LineString and Polygon. in GeoJSON each geometry can have custom properties including complex JSON structures. In digitransit GeoJSON-layers are a easy way to add custom geodata to the map. Examples are charging stations for electic vehicles or ticket zones. GeoJSON layers also support popups with custom content for each geometry.
 Custom styling can be added directly into the GeoJSON file.</p>
@@ -280,8 +283,8 @@ Custom styling can be added directly into the GeoJSON file.</p>
 </div></blockquote>
 <p>Complete documentation including styling can be found in <a class="reference external" href="https://github.com/HSLdevcom/digitransit-ui/blob/master/docs/GeoJson.md">docs/GeoJSON</a>. For dynamic styling of the GeoJSON, you could manipulate the styling properties based on the data properties with a small external script before delivering the file to digitransit-ui.</p>
 <p>Caution: Styling and popup-content behaves different if GeoJSON contains geometry types other than points. If the file only contians points, property <code class="docutils literal notranslate"><span class="pre">address</span></code> will be used for popup content ignoring HTML. If it contains other geometry types then points, popup content from property <code class="docutils literal notranslate"><span class="pre">popupContent</span></code> will be rendered as HTML and the geometries are rendered on all zoomlayers.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

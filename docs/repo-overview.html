@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Repository Overview &mdash; digitransit transportkollektiv cookbook</title>
@@ -13,6 +14,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
 
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/togglebutton.js"></script>
-        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -220,12 +223,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="repository-overview">
+  <section id="repository-overview">
 <h1>Repository Overview<a class="headerlink" href="#repository-overview" title="Permalink to this headline">¶</a></h1>
 <p>If you want to look into different digitransit instances, which features they support, a look into the repositories is always a good idea.
 Sometimes you can reverse engineer the used parts by looking at the deployment files. For an easier overview, we’ve listed the parts below.
 If something changes or you also want to list a digitransit instance here, feel free to edit these docs.</p>
-<div class="section" id="herrenberg-stadtnavi">
+<section id="herrenberg-stadtnavi">
 <h2>Herrenberg, stadtnavi<a class="headerlink" href="#herrenberg-stadtnavi" title="Permalink to this headline">¶</a></h2>
 <p>Improved digitransit with lots of layers and features for Herrenberg: <a class="reference external" href="https://herrenberg.stadtnavi.de">https://herrenberg.stadtnavi.de</a></p>
 <ul class="simple">
@@ -243,8 +246,8 @@ If something changes or you also want to list a digitransit instance here, feel 
 <li><p>Pelias: using photon instead, <a class="reference external" href="https://github.com/stadtulm/photon-pelias-adapter">https://github.com/stadtulm/photon-pelias-adapter</a></p></li>
 <li><p>Deployment: ansible, <a class="reference external" href="https://github.com/stadtnavi/digitransit-ansible">https://github.com/stadtnavi/digitransit-ansible</a></p></li>
 </ul>
-</div>
-<div class="section" id="hsl">
+</section>
+<section id="hsl">
 <h2>HSL<a class="headerlink" href="#hsl" title="Permalink to this headline">¶</a></h2>
 <p><em>The original one</em>. Available at <a class="reference external" href="https://reittiopas.hsl.fi">https://reittiopas.hsl.fi</a></p>
 <ul class="simple">
@@ -257,16 +260,16 @@ If something changes or you also want to list a digitransit instance here, feel 
 <li><p>Proxy: <a class="reference external" href="https://github.com/HSLdevcom/digitransit-proxy">https://github.com/HSLdevcom/digitransit-proxy</a></p></li>
 <li><p>Deployment: azure aks/k8s, <a class="reference external" href="https://github.com/HSLdevcom/digitransit-kubernetes-deploy">https://github.com/HSLdevcom/digitransit-kubernetes-deploy</a></p></li>
 </ul>
-</div>
-<div class="section" id="oulu">
+</section>
+<section id="oulu">
 <h2>Oulu<a class="headerlink" href="#oulu" title="Permalink to this headline">¶</a></h2>
 <p>Interesting UI changes, lots of additional information like traffic cams and snow plowers. <a class="reference external" href="https://www.oulunliikenne.fi">https://www.oulunliikenne.fi</a></p>
 <ul class="simple">
 <li><p>UI: <a class="reference external" href="https://github.com/digiaonline/oulunliikenne-digitransit-ui">https://github.com/digiaonline/oulunliikenne-digitransit-ui</a></p></li>
 </ul>
 <p>For the other services, the UI uses the ones provided by HSL.</p>
-</div>
-<div class="section" id="turin">
+</section>
+<section id="turin">
 <h2>Turin<a class="headerlink" href="#turin" title="Permalink to this headline">¶</a></h2>
 <p>Available at [muoversiatorino.it](<a class="reference external" href="https://www.muoversiatorino.it/-/">https://www.muoversiatorino.it/-/</a>), developed by [5t](<a class="reference external" href="http://www.5t.torino.it/en/muoversi-a-torino/">http://www.5t.torino.it/en/muoversi-a-torino/</a>)</p>
 <ul>
@@ -282,8 +285,8 @@ If something changes or you also want to list a digitransit instance here, feel 
 </li>
 <li><p>Deployment: ???</p></li>
 </ul>
-</div>
-<div class="section" id="ulm-verschworhaus">
+</section>
+<section id="ulm-verschworhaus">
 <h2>Ulm, Verschwörhaus<a class="headerlink" href="#ulm-verschworhaus" title="Permalink to this headline">¶</a></h2>
 <p>The staging, test and development instance. Public at <a class="reference external" href="https://digitransit.im.verschwoerhaus.de">https://digitransit.im.verschwoerhaus.de</a></p>
 <ul class="simple">
@@ -300,8 +303,8 @@ If something changes or you also want to list a digitransit instance here, feel 
 <li><p>Pelias: using photon instead, <a class="reference external" href="https://github.com/stadtulm/photon-pelias-adapter">https://github.com/stadtulm/photon-pelias-adapter</a></p></li>
 <li><p>Deployment: k8s, <a class="reference external" href="https://github.com/verschwoerhaus/digitransit-kubernetes">https://github.com/verschwoerhaus/digitransit-kubernetes</a></p></li>
 </ul>
-</div>
-<div class="section" id="ulm-ulm-dev">
+</section>
+<section id="ulm-ulm-dev">
 <h2>Ulm, ulm.dev<a class="headerlink" href="#ulm-ulm-dev" title="Permalink to this headline">¶</a></h2>
 <p>The more productive instance. Public at <a class="reference external" href="https://digitransit.ulm.dev">https://digitransit.ulm.dev</a></p>
 <ul class="simple">
@@ -318,8 +321,8 @@ If something changes or you also want to list a digitransit instance here, feel 
 <li><p>Pelias: using photon instead, <a class="reference external" href="https://github.com/stadtulm/photon-pelias-adapter">https://github.com/stadtulm/photon-pelias-adapter</a></p></li>
 <li><p>Deployment: k8s, <a class="reference external" href="https://github.com/stadtulm/digitransit-k8s">https://github.com/stadtulm/digitransit-k8s</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

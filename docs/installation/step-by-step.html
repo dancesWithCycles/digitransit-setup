@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Step-by-step guide &mdash; digitransit transportkollektiv cookbook</title>
@@ -13,6 +14,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
 
@@ -28,12 +31,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/togglebutton.js"></script>
-        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -222,7 +225,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="step-by-step-guide">
+  <section id="step-by-step-guide">
 <h1>Step-by-step guide<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -230,7 +233,7 @@
 them with other components (eg. digitransit-proxy) - but for a working instance
 that is easier to maintain, the following steps have proven to be successful.</p>
 </div>
-<div class="section" id="preparing-your-build-host">
+<section id="preparing-your-build-host">
 <h2>0. Preparing your build host<a class="headerlink" href="#preparing-your-build-host" title="Permalink to this headline">¶</a></h2>
 <p>You need on your build host:</p>
 <ul class="simple">
@@ -244,8 +247,8 @@ that is easier to maintain, the following steps have proven to be successful.</p
 <p class="admonition-title">Note</p>
 <p>This should be enhanced with copy-pasteable commands</p>
 </div>
-</div>
-<div class="section" id="building-an-opentripplanner-graph">
+</section>
+<section id="building-an-opentripplanner-graph">
 <h2>1. Building an OpenTripPlanner Graph<a class="headerlink" href="#building-an-opentripplanner-graph" title="Permalink to this headline">¶</a></h2>
 <p>At the end of this part, you will end up with a working <a class="reference internal" href="../glossary.html#term-OTP-data-container"><span class="xref std std-term">OTP data container</span></a>. The process works by providing <a class="reference internal" href="../glossary.html#term-OpenTripPlanner"><span class="xref std std-term">OpenTripPlanner</span></a> with the necessary base data and using it to build the graph that will later be used by OTP to perform routing queries against.</p>
 <div class="admonition important">
@@ -264,7 +267,7 @@ accessible at a public URL - try <a class="reference external" href="https://dow
 </ul>
 <p>For the configuration, find and memorize a short identifier. You
 need this often. In our example, we use <code class="docutils literal notranslate"><span class="pre">ulm</span></code>.</p>
-<div class="section" id="method-1-vsh-style-modifying-of-opentripplanner-data-container">
+<section id="method-1-vsh-style-modifying-of-opentripplanner-data-container">
 <h3>Method 1: vsh-style modifying of opentripplanner-data-container<a class="headerlink" href="#method-1-vsh-style-modifying-of-opentripplanner-data-container" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -391,8 +394,8 @@ correct tag and push it to docker hub:</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="method-2-muenster-style-custom-container">
+</section>
+<section id="method-2-muenster-style-custom-container">
 <h3>Method 2: muenster-style custom container<a class="headerlink" href="#method-2-muenster-style-custom-container" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://codeformuenster.org/">Code for Münster</a> inspired us to use a simpler building
 process by introducing a custom dockerfile for the datacontainer.</p>
@@ -426,9 +429,9 @@ It is important that the OpenTripPlanner version that builds the graph is the sa
 <span class="n">docker</span> <span class="n">push</span> <span class="n">verschwoerhaus</span><span class="o">/</span><span class="n">opentripplanner</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">container</span><span class="o">-</span><span class="n">ulm</span><span class="p">:</span><span class="mi">2020</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">21</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="building-hsl-map-server">
+</section>
+</section>
+<section id="building-hsl-map-server">
 <h2>2. Building hsl-map-server<a class="headerlink" href="#building-hsl-map-server" title="Permalink to this headline">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
@@ -462,8 +465,8 @@ server in digitransit-ui instead.</p>
 </div>
 <p>To build, run <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span> <span class="pre">-t</span> <span class="pre">verschwoerhaus/hsl-map-server:2020-01-21</span> <span class="pre">.</span></code></p>
 <p>Push the resulting image also into docker hub:<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">verschwoerhaus/hsl-map-server:2020-01-21</span></code></p>
-</div>
-<div class="section" id="using-photon-pelias-adapter">
+</section>
+<section id="using-photon-pelias-adapter">
 <h2>3. Using photon-pelias-adapter<a class="headerlink" href="#using-photon-pelias-adapter" title="Permalink to this headline">¶</a></h2>
 <p>digitransit originally uses <a class="reference internal" href="../glossary.html#term-pelias"><span class="xref std std-term">pelias</span></a> as a geocoder: Insert address,
 get geocoordinates as a result.
@@ -478,8 +481,8 @@ imports, but this should be solveable in the long run)</p>
 <p>Later, we’re simply using the docker container
 <a class="reference external" href="https://hub.docker.com/r/stadtulm/photon-pelias-adapter">stadtulm/photon-pelias-adapter from docker
 hub</a>.</p>
-</div>
-<div class="section" id="building-digitransit-ui">
+</section>
+<section id="building-digitransit-ui">
 <h2>4. Building digitransit-ui<a class="headerlink" href="#building-digitransit-ui" title="Permalink to this headline">¶</a></h2>
 <p>Check out <a class="reference external" href="https://github.com/HSLdevcom/digitransit-ui">HSLdevcom/digitransit-ui</a>: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/HSLdevcom/digitransit-ui</span></code></p>
 <p>To build your own digitransit user interface, you need to add a theme
@@ -543,8 +546,8 @@ recognized and used:</p>
 <a class="reference external" href="https://github.com/verschwoerhaus/digitransit-ui/blob/ulm/app/configurations/config.vsh.js">https://github.com/verschwoerhaus/digitransit-ui/blob/ulm/app/configurations/config.vsh.js</a></p>
 <p>Finally, also create an docker image out of the ui: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span> <span class="pre">-t</span> <span class="pre">verschwoerhaus/digitransit-ui:2020-01-21</span> <span class="pre">.</span></code>
 Push the resulting image to docker hub: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">verschwoerhaus/digitransit-ui:2020-01-21</span></code></p>
-</div>
-<div class="section" id="building-digitransit-proxy">
+</section>
+<section id="building-digitransit-proxy">
 <h2>5. Building digitransit-proxy<a class="headerlink" href="#building-digitransit-proxy" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -568,8 +571,8 @@ for all the location config you should remove.</p>
 <p>Note that some endpoints need your configuration name in the url, eg
 <code class="docutils literal notranslate"><span class="pre">/routing/v1/routers/hsl</span></code> → <code class="docutils literal notranslate"><span class="pre">/routing/v1/routers/ulm</span></code>.</p>
 </div>
-</div>
-<div class="section" id="crafting-kubernetes-yaml">
+</section>
+<section id="crafting-kubernetes-yaml">
 <h2>6. Crafting kubernetes yaml<a class="headerlink" href="#crafting-kubernetes-yaml" title="Permalink to this headline">¶</a></h2>
 <p>You need:</p>
 <ul class="simple">
@@ -624,23 +627,23 @@ photon-pelias-adapter (<code class="docutils literal notranslate"><span class="p
 <p>maybe provide existing template and only teach how to
 override/insert config with kustomize</p>
 </div>
-</div>
-<div class="section" id="deploying">
+</section>
+<section id="deploying">
 <h2>7. Deploying<a class="headerlink" href="#deploying" title="Permalink to this headline">¶</a></h2>
 <p>Execute <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">apply</span> <span class="pre">-f</span> <span class="pre">digitransit.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">apply</span> <span class="pre">-f</span> <span class="pre">ingress.yml</span></code></p>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>8. ???<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Watch <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">pods</span></code>.</p>
 <p>Look at <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">ingress</span></code></p>
-</div>
-<div class="section" id="profit">
+</section>
+<section id="profit">
 <h2>9. Profit!<a class="headerlink" href="#profit" title="Permalink to this headline">¶</a></h2>
 <p>Access your digitransit instance. Test one route. Test more routes. Look
 for edge cases. Have a little “test suite” prepared with standard trips
 to check against. Do a little dance :)</p>
-</div>
-<div class="section" id="todo">
+</section>
+<section id="todo">
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>try with a “real” kubernetes cluster, not only single node. eg. GKE</p></li>
@@ -651,8 +654,8 @@ to check against. Do a little dance :)</p>
 <li><p><a class="reference external" href="https://github.com/verschwoerhaus/tilelive-otp-stops/commit/858e8fc7db5fbd206019236816a029259cf40582">https://github.com/verschwoerhaus/tilelive-otp-stops/commit/858e8fc7db5fbd206019236816a029259cf40582</a></p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
